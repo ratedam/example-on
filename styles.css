@@ -1,0 +1,135 @@
+html{
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: Verdana, arial;
+}
+body{
+    max-width: 100%;
+    padding: 10px;
+}
+
+main{
+    font-size: 1.125rem;
+    line-height: 28px;
+    margin-top: 5%;
+}
+
+main img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #72C9D9;
+    font-weight: 700;
+    font-size: 1.313rem;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+.logo{
+    width: 25%;
+    display: inline-block;
+}
+
+.menu-items{
+    text-align: right;
+    float: right;
+    display: inline-block;
+    width: 75%;
+    margin-top: 5%;
+}
+
+.menu-items ul{
+    padding: 0;
+}
+
+.menu-items li{
+    display: inline-block;
+    padding-left:5%;
+}
+
+.main-content{
+    width: 75%;
+    float: left;
+    border-top: 5px solid #72C9D9;
+    margin-bottom: 30px;
+}
+
+.sidebar{
+    width: 23%;
+    margin-left: 2%;
+    float: left;
+}
+.sidebar img{
+    margin-bottom: 20px;
+}
+
+footer{
+    clear: left;
+    text-align: center;
+    border-top: 5px solid #72C9D9;
+}
+
+footer ul{
+    padding: 0;
+}
+footer li{
+    display: inline-block;
+    padding-left:5%;
+}
+
+/**
+    The media queries
+ */
+@media screen and (max-width: 480px) {
+
+    .menu-items,
+    .main-content ,
+    .sidebar{
+        float: none;
+        width: 100%
+    }
+
+    footer li{
+        padding: 0;
+        margin-bottom: 15px;
+        display: block;
+    }
+}
+
+/**
+    The menu is breaking too soon. The best width to break it that i found was 695px
+ */
+@media screen and (max-width: 695px) {
+    .logo{
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items{
+        float: none;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        overflow: auto;
+        white-space: nowrap;
+        /* Edge fix to hide scrollbar */
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .menu-items::-webkit-scrollbar {
+        /* webkit fix to hide scrollbar */
+        display: none;
+    }
+
+    .menu-items li{
+        padding-right: 10px;
+    }
+    .menu-items li:first-child{
+        padding-left: 0;
+    }
+}
